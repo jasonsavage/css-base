@@ -4,6 +4,7 @@ a
 {
 	color:#333333;
 	text-decoration:underline;
+	cursor:pointer;
 		
 	&:link,
 	&:visited
@@ -19,6 +20,12 @@ a
 	{
 		
 	}
+	&.disabled
+    {
+        cursor:default;
+        opacity:0.5;
+        filter:alpha(opacity=50);
+    }
 }
 
 //default button
