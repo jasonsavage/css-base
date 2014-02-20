@@ -1,0 +1,196 @@
+
+//image replace
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+	
+	&:before 
+	{
+		content: "";
+		display: block;
+		width: 0;
+		height: 100%;
+	}
+}
+a.ir
+{
+	display:block;
+    vertical-align: middle;
+}
+
+//hide elements
+.hidden 
+{
+    display: none !important;
+    visibility: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+//clear fix
+.clearfix 
+{
+    *zoom: 1;
+	
+	&:before,
+	&:after 
+	{
+		content: " ";
+		display: table;
+	}
+	&:after 
+	{
+		clear: both;
+	}
+}
+
+.pull-right
+{
+	float:right;
+}
+
+//horizontal rule
+hr
+{
+    clear:both;
+    width:100%;
+    border:0px;
+    //color:#333333;
+    //background-color:#333333;
+    border-top:1px solid #333333;
+
+    //total height 10
+    height:0px; 
+    margin:4px 0px 5px 0px;
+    overflow:hidden;
+    padding-top:1px;
+
+    &.none
+    {
+        *filter : alpha(opacity=0);
+        border-top:0px;
+    }
+    &.dot
+    {
+        border-top:1px dotted #333333;
+    }
+    &.dash
+    {
+        border-top:1px dashed #333333;
+    }
+    &.x2
+    {
+        //total height 20
+        margin:10px 0px;
+    }
+    &.x3
+    {
+        //total height 30
+        margin:15px 0px;
+    }
+    &.x4
+    {
+        //total height 40
+        margin:20px 0px;
+    }
+    &.x5
+    {
+        //total height 50
+        margin:25px 0px;
+    }
+    &.bottom
+    {
+        &.x2
+        {
+            //total height 20
+            margin:20px 0px 0px;
+        }
+        &.x3
+        {
+            //total height 30
+            margin:30px 0px 0px;
+        }
+        &.x4
+        {
+            //total height 40
+            margin:40px 0px 0px;
+        }
+        &.x5
+        {
+            //total height 50
+            margin:50px 0px 0px;
+        }
+    }
+    &.top
+    {
+        &.x2
+        {
+            //total height 20
+            margin:0px 0px 20px;
+        }
+        &.x3
+        {
+            //total height 30
+            margin:0px 0px 30px;
+        }
+        &.x4
+        {
+            //total height 40
+            margin:0px 0px 40px;
+        }
+        &.x5
+        {
+            //total height 50
+            margin:0px 0px 50px;
+        }
+    }
+        
+}
+
+//icons - from twitter bootstrap
+[class^="icon-"],
+[class*=" icon-"]
+{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	*margin-right: .3em;
+	line-height: 14px;
+	vertical-align: middle;
+	margin-top: 1px;
+}
+
+
+
+//default data table style
+table.data-table
+{
+	width:100%;
+	margin-bottom:10px;
+	padding-bottom:1px;
+        border:1px solid #000;
+	
+	th
+	{
+		font-weight:bold;
+		padding:5px 5px;
+		text-align:left;
+		background:#F0F0F0;
+		
+		border-bottom:3px solid #666666;
+		border-left:1px solid #000;
+	}
+	
+	td
+	{
+		padding:2px 3px;
+		text-align:left;
+		border-left:1px solid #000;
+                border-bottom:1px dotted #333;
+	}
+}

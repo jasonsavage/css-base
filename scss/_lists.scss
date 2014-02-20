@@ -1,0 +1,128 @@
+//default definition list
+dl
+{
+    > dt
+    {
+        font-weight:bold;
+        border-bottom:1px dotted #cccccc;
+        margin:0px 0px 3px 0px;
+        padding:0 0 2px 0;
+    }
+    > dd
+    {
+        margin:0px 0px 5px 3%;
+        padding:0px;
+        
+        > ul
+        {
+
+        }
+    }
+}
+
+
+
+//default list style
+ul
+{
+    overflow:hidden;
+    list-style:disc outside none;
+    margin:0px 0px 10px 0px;
+    padding:0px 0px 0px 16px;
+    
+    li
+    {
+        margin:0px 0px 5px 0px;
+        padding:0px;
+        
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        
+        //item indent
+        &.indent
+        {
+            margin-left:3%;
+        }
+        
+        > ul
+        {
+            margin:5px 0px 0px 3%;
+            list-style:circle inside none;
+            margin-bottom:0px;
+            
+            li:last-child {margin-bottom:0px;}
+            
+            > li 
+            {
+                > ul
+                {
+                    list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==');
+                }
+            }
+        }
+    }
+    
+    //list indent
+    &.indent
+    {
+        margin-left:3%;
+    }
+    
+    //no dots
+    &.none
+    {
+        list-style:none outside none;
+    }
+    
+    &.horz > li
+    {
+        float:left;
+        margin:0px 0px 0px 5px;
+        
+        &:first-child { margin-left:0%; }
+        
+        > ul
+        {
+            margin:5px 0px 0px 0px;
+        }
+    }
+}
+
+
+ul.menu
+{
+    overflow:hidden;
+    list-style:none outside none;
+    margin:0px; 
+    padding:0px;
+    
+    li
+    {
+        margin:0 0 2px 0;
+        
+        &.indent
+        {
+            margin-left:3%;
+        }
+        
+        > a
+        {
+            display:block;
+            width:100%;
+            height:100%;
+            text-decoration:none;
+        }
+    }
+    
+    &.indent
+    {
+        margin-left:3%;
+    }
+    
+    &.horz > li
+    {
+        margin:0px 0px 0px 5px;
+        &:first-child { margin-left:0%; }
+    }
+}

@@ -1,0 +1,93 @@
+
+// Your base font-size in pixels
+$base-font-size	: 14; 			
+
+
+$font-size-h1: 48;
+$font-size-h2: 36;
+$font-size-h3: 24;
+$font-size-h4: 21;
+$font-size-h5: 18;
+
+
+$default-margin-bottom : 20;
+
+body 
+{
+	color:#333333;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 100%/1.5;
+}
+
+h1, h2, h3, h4, h5, p
+{
+	padding:0em;
+	margin:0 0 #{$default-margin-bottom}px 0;
+}
+
+//default type formulas from Toast Framework
+
+h1, .h1
+{
+    font-size: #{$font-size-h1/$base-font-size}em; // 48 / 16 
+    line-height: #{48/$font-size-h1}em; // 48 / 48 
+    margin-bottom: #{24/$font-size-h1}em; // 24 / 48 
+}
+
+h2, .h2
+{
+    font-size: #{$font-size-h2/$base-font-size}em; // 36 / 16 
+    line-height: #{48/$font-size-h2}em; // 48 / 36 
+    margin-bottom: #{24/$font-size-h2}em; // 24 / 36 
+}
+
+h3, .h3
+{
+    font-size: #{$font-size-h3/$base-font-size}em; // 24 / 16
+    line-height: #{24/$font-size-h3}em; // 24 / 24
+    margin-bottom: #{24/$font-size-h3}em; // 24 / 24
+}
+
+h4, .h4 
+{
+    font-size: #{$font-size-h4/$base-font-size}em; // 21 / 16
+    line-height: #{24/$font-size-h4}em; // 24 / 21
+    margin-bottom: #{24/$font-size-h4}em; // 24 / 21
+}
+
+h5, .h5 
+{
+    font-size: #{$font-size-h5/$base-font-size}em; // 18 / 16 
+    line-height: #{24/$font-size-h5}em; // 24 / 18 
+    margin-bottom: #{24/$font-size-h5}em; // 24 / 18 
+}
+
+
+p, ul, ol, dl, blockquote 
+{
+	padding:0px;
+    margin-bottom: 1em; // 24 / 16
+}
+
+.tl { text-align:left; }
+.tc, .center { text-align:center; }
+.tr { text-align:right; }
+
+.sm { font-size:70%; }
+.big { font-size:130%; }
+
+b, .b { font-weight:bold; }
+i, .i { font-style:italic; }
+u, .u { text-decoration:underline; }
+
+.legal 
+{ 
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:10px; 
+} 
+	
+	
+	
+	
+	
+	

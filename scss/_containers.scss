@@ -1,0 +1,68 @@
+
+article,
+aside,
+details,
+footer,
+header,
+hgroup,
+nav,
+section,
+div
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.wrapper
+{
+    width:100%;
+    max-width:1024px;
+    margin:0px auto;
+
+    &.facebook
+    {
+        width:810px;
+    }
+}
+
+
+.container,
+.content,
+.group,
+.hero
+{
+    position: relative;
+    margin:0px auto 10px auto;
+    padding-top:1px;
+
+    @include clearfix();
+}
+
+$container_max_width : 960;
+
+.container
+{
+    //full width
+    width:100%;
+    max-width:#{$container_max_width * 1}px;
+}
+
+.content
+{
+    width:95%;
+    max-width:#{$container_max_width * .95}px;
+}
+
+.group
+{
+    width:90%;
+    max-width:#{$container_max_width * .9}px;
+}
+
+.hero
+{
+    width:85%;
+    max-width:#{$container_max_width * .85}px;
+}

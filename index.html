@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>CSS Base :: Test</title>
+
+        <link rel="stylesheet" type="text/css" href="css/engauge-base.css"/>
+
+        <style>
+
+            .gp
+            {
+                position:relative;
+                background: #F0F0F0;
+                padding:10px;
+                margin:20px 0px 30px;
+
+                border: 5px solid white;
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+                -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+                -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+            }
+
+
+            .gp-h
+            {
+                font-size:24px;
+                font-weight:bold;
+                border-bottom:2px dotted #C13100;
+                padding:5px 0px;
+                margin-bottom:10px;
+            }
+            .gp-h.sub
+            {
+                font-size:14px;
+                font-weight:bold;
+                color:#999999;
+                border-bottom:1px dotted #999999;
+            }
+            
+            
+            .sh_bottom{
+                width: 100%; height: 45%;
+                position:absolute;
+                z-index: -2;
+                bottom: 0; right: 0;
+                -webkit-border-radius: 50px;
+                -moz-border-radius: 50px;
+                border-radius: 50px;
+                -webkit-box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
+            }
+            .sh_bottom:after{
+                content: "";
+                position:absolute;
+                right: 0; bottom:0;
+                width:150px; height: 100px;
+                z-index: -1;
+                background: rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: 20px 30px 11px rgba(0, 0, 0, 0.28);
+                -webkit-box-shadow: 20px 30px 11px rgba(0, 0, 0, 0.28);
+                box-shadow: 20px 30px 11px rgba(0, 0, 0, 0.28);
+                -moz-transform:skew(10deg,10deg) translate(-40px,-15px);
+                -webkit-transform:skew(10deg,10deg) translate(-40px,-15px);
+                transform:skew(10deg,10deg) translate(-40px,-15px);
+            }
+            .sh_bottom:before{
+                content: "";
+                position:absolute;
+                left: 0; bottom:0;
+                width:150px; height: 100px;
+                z-index: -1;
+                background: rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: -20px 30px 11px rgba(0, 0, 0, 0.28);
+                -webkit-box-shadow: -20px 30px 11px rgba(0, 0, 0, 0.28);
+                box-shadow: -20px 30px 11px rgba(0, 0, 0, 0.28);
+                -webkit-transform:skew(-10deg,-10deg) translate(40px,-15px);
+                -moz-transform:skew(-10deg,-10deg) translate(40px,-15px);
+                transform:skew(-10deg,-10deg) translate(40px,-15px);
+            }
+            
+            .lists > ul
+            {
+                background-color:#ffffff; 
+                padding:5px;
+            }
+            
+            .lists > ul li
+            {
+                background-color:#efefef;
+                padding:5px;
+            }
+            
+            .hrule
+            {
+                background-color:#ffffff; 
+            }
+
+
+            .grid
+            {
+                background-color:#CC6600;
+                padding:5px 0px 5px 0px;
+            }
+            .col
+            {
+                background-color:#FF9900;
+                height:50px;
+            }
+
+            form .grid
+            {
+                background:none;
+                padding:0px;
+            }
+            form .col
+            {
+                background: none;
+                height:auto;
+            }
+            .y-bg
+            {
+                background:#FFFBD0;
+                padding:5px;
+                margin-bottom:2px;
+            }
+            .g { background-color: #F0F0F0; padding: 10px; margin-top:10px;}
+            .y { background-color: #FFFBD0; padding: 10px; margin-top:10px;}
+            .o { background-color: #FF9900; padding: 10px; margin-top:10px;}
+            .do { background-color: #CC6600;padding: 10px; margin-top:10px; }
+            .y-bg2{ background:#FFFBD0; margin-top:2px; padding:1px; }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+            
+            <div class="container">
+                
+                <h1>css-base <p class="sm">Version 1.4</p></h1>
+                
+                <div class="gp-h">containers</div>
+                
+                <div class="wrapper">
+                    div.wrapper (100%, max-width:1024px)
+                </div>
+                <div class="container g">
+                    div.container (100%, max-width:960px)
+                </div>
+                <div class="content y">
+                    div.content (95%, max-width:912px)
+                </div>
+                <div class="group o">
+                    div.gp (90%, max-width:864px)
+                </div>
+                <div class="hero do">
+                    div.hero (85%, max-width:816px)
+                </div>
+
+                <div class="gp">
+                    <div class="gp-h">Type</div>
+
+                    <h1>h1. Default Heading 1</h1>
+
+                    <h2>h2. Default Heading 2</h2>
+
+                    <h3>h3. Default Heading 3</h3>
+
+                    <h4>h4. Default Heading 4</h4>
+
+                    <h5>h5. Default Heading 5</h5>
+
+                    <p>p. Default Paragraph</p>
+
+                    <div class="y-bg tl">(.tl) text-align left</div>
+                    <div class="y-bg tc">(.tc) or (.center) text-align center</div>
+                    <div class="y-bg tr">(.tl) text-align right</div>
+
+                    <p>Default Paragraph with <span class="sm">(.sm) small text</span> and <span class="big">(.big) big text</span></p>
+                    <p>Default Paragraph with <span class="b i">(.b .i) bold italic text</span> and <span class="u">(.u) underlined text</span></p>
+
+                    <p class="legal">(.legal) Boring legal text in the footer</p>
+
+                    <div class="sh_bottom"></div>
+                </div>
+
+
+                <div class="gp">
+                    <div class="gp-h">Buttons</div>
+                    
+                    <div class="gp-h sub">a</div>
+                    <a href="#">This is a default hyperlink</a>
+                    <br />
+                    
+                    <div class="gp-h sub">button</div>
+                    <button>This is a default button</button>
+                    <br />
+                    
+                    <div class="gp-h sub">input[type=button]</div>
+                    <input type="button" value="This is a default form button" />
+                    <br />
+                    
+                    <div class="gp-h sub">a.btn.disabled</div>
+                    <a class="btn disabled">This is a default button disabled</a>
+                    <br />
+
+                    <div class="sh_bottom"></div>
+                </div>
+
+                <div class="gp lists">
+                    <div class="gp-h">Lists</div>
+                    
+                    <div class="gp-h sub">dl, dt, dd</div>
+                    <dl>
+                        <dt>definition item 1</dt>
+                        <dd>details for the definition</dd>
+
+                        <dt>definition item 2</dt>
+                        <dd>details for the definition</dd>
+
+                        <dt>definition item 3</dt>
+                        <dd>
+                            <ul>
+                                <li>list</li>
+                                <li>inside</li>    
+                                <li>definition</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    
+                    <div class="gp-h sub">ul</div>
+                    
+                    <ul>
+                        <li>This</li>
+                        <li>is a</li>
+                        <li>default</li>
+                        <li>unordered</li>
+                        <li>list</li>
+                        <li class="indent">with an indented item (.indent)</li>
+                        <li>another item with a sub list
+                            <ul>
+                                <li>This is</li>
+                                <li>a nested list
+                                    <ul>
+                                        <li>and</li>
+                                        <li>another</li>
+                                        <li>nested list</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <div class="gp-h sub">ul.horz</div>
+                    
+                    <ul class="horz">
+                        <li>This</li>
+                        <li>is a</li>
+                        <li>(ul.horz)</li>
+                        <li>list</li>
+                    </ul>
+                    
+                    <div class="gp-h sub">ul.menu</div>
+                    
+                    <ul class="menu">
+                        <li>This</li>
+                        <li>is a</li>
+                        <li>(ul.menu)</li>
+                        <li>list</li>
+                        <li class="indent">with an indented item (.indent) </li>
+                        <li><a href="#">and a link</a></li>
+                    </ul>
+                    
+                    <div class="gp-h sub">ul.menu.horz</div>
+                    
+                    <ul class="menu horz">
+                        <li>This</li>
+                        <li>is a</li>
+                        <li>(ul.menu.horz)</li>
+                        <li>list</li>
+                    </ul>
+
+                    <div class="sh_bottom"></div>
+                </div>
+
+                <div class="gp">
+                    <div class="gp-h">Common - (hr tag)</div>
+                    
+                    <span>hr</span>
+                    <div class="y-bg2">
+                        <hr />
+                    </div>
+                    
+                    <span>hr.none</span>
+                    <div class="y-bg2">
+                        <hr class="none"/>
+                    </div>
+                    
+                    <span>hr.dot</span>
+                    <div class="y-bg2">
+                        <hr class="dot"/>
+                    </div>
+                    
+                    <span>hr.dash</span>
+                    <div class="y-bg2">
+                        <hr class="dash"/>
+                    </div>
+
+                    <span>hr.x2</span>
+                    <div class="y-bg2">
+                        <hr class="x2"/>
+                    </div>
+                    
+                    <span>hr.top.x2</span>
+                    <div class="y-bg2">
+                        <hr class="top x2"/>
+                    </div>
+                    
+                    <span>hr.bottom.x2</span>
+                    <div class="y-bg2">
+                        <hr class="bottom x2"/>
+                    </div>
+
+                    <span>hr.x3</span>
+                    <div class="y-bg2">
+                        <hr class="x3"/>
+                    </div>
+
+                    <span>hr.x4</span>
+                    <div class="y-bg2">
+                        <hr class="x4"/>
+                    </div>
+                    
+                    <span>hr.x5</span>
+                    <div class="y-bg2">
+                        <hr class="x5"/>
+                    </div>
+                    
+                    <div class="sh_bottom"></div>
+                </div>
+
+                <div class="gp">
+                    <div class="gp-h">Data Tables (.data-table)</div>
+                    
+                    <div class="gp-h sub">table.data-table</div>
+                    <table class="data-table">
+                        <tr>
+                            <th>Column Header A</th>
+                            <th>Column Header B</th>
+                            <th>Column Header C</th>
+                            <th>Column Header D</th>
+                        </tr>
+                        <tr>
+                            <td>Content Row A</td>
+                            <td>B</td>
+                            <td>100</td>
+                            <td><button>Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Content Row B</td>
+                            <td>B</td>
+                            <td>100</td>
+                            <td><button>Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Content Row C</td>
+                            <td>B</td>
+                            <td>100</td>
+                            <td><button>Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Content Row D</td>
+                            <td>B</td>
+                            <td>100</td>
+                            <td><button>Edit</button></td>
+                        </tr>
+                    </table>
+
+                    <div class="sh_bottom"></div>
+                </div>
+
+                <div class="gp">
+                    <div class="gp-h">Grid (.grid)</div>
+                    
+                    <div class="gp-h sub">col</div>
+                    <div class="grid">
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span2</div>
+                    <div class="grid">
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span3</div>
+                    <div class="grid">
+                        <div class="col span3"></div>
+                        <div class="col span3"></div>
+                        <div class="col span3"></div>
+                        <div class="col span3"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span4</div>
+                    <div class="grid">
+                        <div class="col span4"></div>
+                        <div class="col span4"></div>
+                        <div class="col span4"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span5</div>
+                    <div class="grid">
+                        <div class="col span5"></div>
+                        <div class="col span5"></div>
+                        <div class="col span2"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span6</div>
+                    <div class="grid">
+                        <div class="col span6"></div>
+                        <div class="col span6"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span7</div>
+                    <div class="grid">
+                        <div class="col span7"></div>
+                        <div class="col span5"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span8</div>
+                    <div class="grid">
+                        <div class="col span8"></div>
+                        <div class="col span4"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span9</div>
+                    <div class="grid">
+                        <div class="col span9"></div>
+                        <div class="col span3"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span10</div>
+                    <div class="grid">
+                        <div class="col span10"></div>
+                        <div class="col span2"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span11</div>
+                    <div class="grid">
+                        <div class="col span11"></div>
+                        <div class="col"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span12</div>
+                    <div class="grid">
+                        <div class="col span12"></div>
+                    </div>
+
+                    <div class="sh_bottom"></div>
+                </div>
+                
+                <div class="gp">
+                    <div class="gp-h">Grid (.grid.c16)</div>
+                    
+                    <div class="gp-h sub">col</div>
+                    <div class="grid c16">
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span2</div>
+                    <div class="grid c16">
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                        <div class="col span2"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span3</div>
+                    <div class="grid c16">
+                        <div class="col span3"></div>
+                        <div class="col span3"></div>
+                        <div class="col span3"></div>
+                        <div class="col span3"></div>
+                        <div class="col span3"></div>
+                        <div class="col"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span4</div>
+                    <div class="grid c16">
+                        <div class="col span4"></div>
+                        <div class="col span4"></div>
+                        <div class="col span4"></div>
+                        <div class="col span4"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span5</div>
+                    <div class="grid c16">
+                        <div class="col span5"></div>
+                        <div class="col span5"></div>
+                        <div class="col span5"></div>
+                        <div class="col"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span6</div>
+                    <div class="grid c16">
+                        <div class="col span6"></div>
+                        <div class="col span6"></div>
+                        <div class="col span4"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span7</div>
+                    <div class="grid c16">
+                        <div class="col span7"></div>
+                        <div class="col span7"></div>
+                        <div class="col span2"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span8</div>
+                    <div class="grid c16">
+                        <div class="col span8"></div>
+                        <div class="col span8"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span9</div>
+                    <div class="grid c16">
+                        <div class="col span9"></div>
+                        <div class="col span7"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span10</div>
+                    <div class="grid c16">
+                        <div class="col span10"></div>
+                        <div class="col span6"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span11</div>
+                    <div class="grid c16">
+                        <div class="col span11"></div>
+                        <div class="col span5"></div>
+                    </div>
+
+                    <div class="gp-h sub">col.span12</div>
+                    <div class="grid c16">
+                        <div class="col span12"></div>
+                        <div class="col span4"></div>
+                    </div>
+                    
+                    <div class="gp-h sub">col.span13</div>
+                    <div class="grid c16">
+                        <div class="col span13"></div>
+                        <div class="col span3"></div>
+                    </div>
+                    
+                    <div class="gp-h sub">col.span14</div>
+                    <div class="grid c16">
+                        <div class="col span14"></div>
+                        <div class="col span2"></div>
+                    </div>
+                    
+                    <div class="gp-h sub">col.span15</div>
+                    <div class="grid c16">
+                        <div class="col span15"></div>
+                        <div class="col"></div>
+                    </div>
+                    
+                    <div class="gp-h sub">col.span16</div>
+                    <div class="grid c16">
+                        <div class="col span16"></div>
+                    </div>
+
+                    <div class="sh_bottom"></div>
+                </div>
+
+                <div class="gp">
+                    <div class="gp-h">Default Form</div>
+                    
+                    <div class="gp-h sub">form &gt; div.field</div>
+                    <form onsubmit="return false;">
+                        
+                        <div class="field left">
+                            <label for="first_name">First Name<sup>*</sup></label>
+                            <input type="text" id="first_name" name="first_name" />
+                        </div>
+
+                        <div class="field right invalid">
+                            <label for="last_name">Last Name<sup>*</sup></label>
+                            <input type="text" id="last_name" name="last_name" />
+                            <span class="error">Required</span>
+                        </div>
+
+                        <hr class="none" />
+
+                        <div class="field left">
+                            <label for="address">Address<sup>*</sup></label>
+                            <input type="text" id="address" name="address" />
+                        </div>
+
+                        <hr class="none" />
+
+                        <div class="field left">
+                            <label for="city">City<sup>*</sup></label>
+                            <input type="text" id="city" name="city" />
+                        </div>
+
+                        <div class="field right grid">
+                            <div class="col span6">
+                                <label for="state">State<sup>*</sup></label>
+                                <select id="state" name="state">
+                                    <option value="">--</option>
+                                </select>
+                            </div>
+                            <div class="col span6">
+                                <label for="zip">Zip Code<sup>*</sup></label>
+                                <input type="text" id="zip" name="zip" />
+                            </div>
+                        </div>
+
+                        <hr class="none" />
+
+                        <div class="field left">
+                            <label for="email">Email Address<sup>*</sup></label>
+                            <input type="text" id="email" name="email" />
+                        </div>
+
+                        <div class="field right grid">
+                            <div class="col span6">
+                                <label for="birthday">Birthday<sup>*</sup></label>
+                                <div class="field-icon">
+                                    <input class="datepicker" type="text" id="birthday" name="birthday" />
+                                    <i class="icon-calendar"></i>
+                                </div>
+                            </div>
+                            <div class="col span6"></div>
+                        </div>
+
+                        <hr class="none" />
+
+                        <div class="field">
+                            <label>Please select an animal:</label>
+
+                            <div class="custom-radio">
+                                <input type="radio" name="example" id="dog" value="dog" />
+                                <label class="radio" for="dog"></label>
+                                <label>Dog</label>
+                            </div>
+
+                            <div class="custom-radio">
+                                <input type="radio" name="example" id="cat" value="cat" />
+                                <label class="radio" for="cat"></label>
+                                <label>Cat</label>
+                            </div>
+
+                            <div class="custom-radio">
+                                <input type="radio" name="example" id="fish" value="fish" />
+                                <label class="radio" for="fish"></label>
+                                <label>Fish</label>
+                            </div>
+
+                        </div>
+
+                        <hr class="none" />
+
+                        <div class="field full custom-checkbox">
+                            <input type="checkbox" id="terms" name="terms" />
+                            <label class="checkbox" for="terms"></label>
+                            <label>I accept the <a class="contest-rules" href="javascript:void(0)" title="contest rules">contest rules</a>.</label>
+                        </div>
+
+                        <hr class="none" />
+
+                        <div class="field full">
+                            <input type="submit" value="Submit" />
+                        </div>
+
+                    </form>
+
+                    <div class="sh_bottom"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

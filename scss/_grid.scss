@@ -1,0 +1,93 @@
+
+$grid_max           : 960;
+$grid_gutter        : 20;
+$grid_col_count     : 12;
+
+$grid_shim_ie       : 0;
+
+$grid_gutter_area   : $grid_gutter * ($grid_col_count - 1);   // 220
+$grid_col_area      : $grid_max - $grid_gutter_area;          // 740
+
+//based on twitter bootstrap
+.grid
+{
+    overflow:hidden;
+    list-style: none; //for ul lists
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    @include clearfix();
+
+    .col
+    {
+        display: block;
+        float: left;
+        
+        min-height: 20px;
+        
+        margin-left : percentage( $grid_gutter / $grid_max  );
+        *margin-left: percentage( ($grid_gutter / $grid_max) + $grid_shim_ie );
+
+        &:first-child { margin-left:0em; }
+        
+        @for $i from 1 through $grid_col_count
+        {
+            //get col area
+            $c  : $grid_col_count / $i;
+            $ca : 1 - (($grid_gutter / $grid_max) * ($c - 1));
+            
+            @if $i == 1 
+            {
+                width : percentage( $ca / $c );
+                *width: percentage( ($ca / $c) + $grid_shim_ie );
+            }
+            @else
+            {
+                &.span#{$i} 
+                {
+                  width : percentage( $ca / $c );
+                  *width: percentage( ($ca / $c) + $grid_shim_ie );
+                }
+            }
+        }
+    }
+    
+    &.c16
+    {
+        > .col
+        {
+            &:first-child { margin-left:0em; }
+            
+            $grid_col_count : 16;
+            $grid_gutter    : 16;
+            
+            margin-left : percentage( $grid_gutter / $grid_max  );
+            *margin-left: percentage( ($grid_gutter / $grid_max) + $grid_shim_ie );
+        
+            @for $i from 1 through $grid_col_count
+            {
+                //get col area
+                $c  : $grid_col_count / $i;
+                $ca : 1 - (($grid_gutter / $grid_max) * ($c - 1));
+
+                @if $i == 1 
+                {
+                    width : percentage( $ca / $c );
+                    *width: percentage( ($ca / $c) + $grid_shim_ie );
+                }
+                @else
+                {
+                    &.span#{$i} 
+                    {
+                      width : percentage( $ca / $c );
+                      *width: percentage( ($ca / $c) + $grid_shim_ie );
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
