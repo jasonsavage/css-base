@@ -1,4 +1,6 @@
 
+::-webkit-file-upload-button { cursor:pointer; }
+
 form
 {
     display:block;
@@ -240,6 +242,34 @@ form
             -webkit-box-shadow: inset 0px 0px 0px 4px #ffffff;
             box-shadow: inset 0px 0px 0px 4px #ffffff;
         }
+    }
+    
+    &.custom-file,
+    .custom-file
+    {
+        //Used as the button
+        .browse
+        {
+            position:relative;
+            overflow:hidden;
+            cursor:pointer;
+            
+            input[type='file']
+            {
+                position: absolute; 
+                cursor: pointer; 
+                height: 100%; 
+                font-size: 50px; 
+                filter: alpha(opacity=01); 
+                -moz-opacity: 0.01; 
+                opacity: 0.01;
+            }
+        }
+        
+        //clearfix
+        *zoom: 1;
+        &:before, &:after { content: " "; display: table; }
+        &:after { clear: both; }
     }
     
     a

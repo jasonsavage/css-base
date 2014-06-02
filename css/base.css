@@ -224,6 +224,8 @@ ul.menu.horz > li { margin: 0px 0px 0px 5px; }
 ul.menu.horz > li:first-child { margin-left: 0%; }
 
 /* Default form styles */
+::-webkit-file-upload-button { cursor: pointer; }
+
 form { display: block; margin: 0px auto 20px; *zoom: 1; }
 form:before, form:after { display: table; content: ""; line-height: 0; }
 form:after { clear: both; }
@@ -255,6 +257,11 @@ form:after { clear: both; }
 .field.custom-radio label, .field .custom-radio label { display: inline; vertical-align: auto; }
 .field.custom-radio label.radio, .field .custom-radio label.radio { display: inline-block; display: none\9; width: 15px; height: 15px; border-radius: 15px; background: #ffffff; border: 1px solid #666; margin-right: 8px; margin-bottom: 0px; cursor: pointer; overflow: hidden; vertical-align: middle; }
 .field.custom-radio input[type=radio]:checked + label.radio, .field .custom-radio input[type=radio]:checked + label.radio { background: #666; -moz-box-shadow: inset 0px 0px 0px 4px #ffffff; -webkit-box-shadow: inset 0px 0px 0px 4px #ffffff; box-shadow: inset 0px 0px 0px 4px #ffffff; }
+.field.custom-file, .field .custom-file { *zoom: 1; }
+.field.custom-file .browse, .field .custom-file .browse { position: relative; overflow: hidden; cursor: pointer; }
+.field.custom-file .browse input[type='file'], .field .custom-file .browse input[type='file'] { position: absolute; cursor: pointer; height: 100%; font-size: 50px; filter: alpha(opacity=1); -moz-opacity: 0.01; opacity: 0.01; }
+.field.custom-file:before, .field.custom-file:after, .field .custom-file:before, .field .custom-file:after { content: " "; display: table; }
+.field.custom-file:after, .field .custom-file:after { clear: both; }
 .field a { text-decoration: underline; }
 .field a:hover { text-decoration: none; }
 
